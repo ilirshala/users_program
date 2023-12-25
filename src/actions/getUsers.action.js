@@ -11,8 +11,6 @@ export const getUsers = () => {
         params: {results: 200},
       });
       if (response && response.data && response.data.results) {
-        // Assuming response.data.results contains the user data
-        // console.log(JSON.parse(response.data.results), 'response.data.results');
         dispatch({
           type: GET_USERS_SUCCESS,
           payload: JSON.stringify(response.data.results),
